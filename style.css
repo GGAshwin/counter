@@ -68,5 +68,8 @@ button:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  button {
+    margin: 5px 0 10px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
