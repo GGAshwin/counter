@@ -14,7 +14,27 @@ function getrandomNumber() {
     return Math.floor(Math.random() * hex.length);
 }*/
 
+const achievement_list = [
+  {
+    title: "Your First Count!",
+    minN: 1,
+    achieved: false,
+  },
+];
+
 const updateNumber = (n, increasing = false) => {
+  achievement_list.forEach((item) => {
+    if (item.achieved === false) {
+      if (n >= item.minN) {
+        let achievement_item = document.createElement("div");
+        achievement_item.classList.add("achievement-item");
+        achievement_item.innerHTML = item.title;
+        document.getElementById("my-achievement").prepend(achievement_item);
+        item.achieved = true;
+      }
+    }
+  });
+
   document.getElementById("number").innerText = n;
   if (n > 0 || increasing) {
     document.getElementById("number").style.color = "green";

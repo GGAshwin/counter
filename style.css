@@ -52,5 +52,28 @@ button:hover {
     margin: 5px 0 10px 0;
   }
 }
+.achievement-container {
+  text-align: center;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 85%;
+}
+
+.achievement-list {
+  width: 200px;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.achievement-item {
+  text-align: left;
+  background-color: #efefef;
+  margin: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+}
 
 /*# sourceMappingURL=style.css.map */
