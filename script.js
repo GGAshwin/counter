@@ -22,7 +22,10 @@ btn_plus.addEventListener('click', function () {
     n++;
     document.getElementById('number').innerText = n;
     console.log(n);
-    if (n >= 0) {
+        if (n > 0) {
+        document.getElementById('number').style.color = "green";
+    }
+    if (n == 0) {
         document.getElementById('number').style.color = "black";
     }
 })
