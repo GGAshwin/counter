@@ -14,51 +14,52 @@ function getrandomNumber() {
     return Math.floor(Math.random() * hex.length);
 }*/
 
-var n = 0;
-const btn_plus = document.getElementById('btn_plus');
-const btn_minus = document.getElementById('btn_minus');
-const btn_reset = document.getElementById('btn_reset');
-const start = document.getElementById('start');
-btn_plus.addEventListener('click', function () {
-    n++;
-    document.getElementById('number').innerText = n;
-    console.log(n);
-        if (n > 0) {
-        document.getElementById('number').style.color = "green";
-    }
-    if (n == 0) {
-        document.getElementById('number').style.color = "black";
-    }
-})
-btn_minus.addEventListener('click', function () {
-    n--;
-    document.getElementById('number').innerText = n;
-    // console.log(n);
-    if (n < 0) {
-        document.getElementById('number').style.color = "red";
-    }
-})
-btn_reset.addEventListener('click', function () {
-    n = 0;
-    document.getElementById('number').innerText = n;
-    // console.log(n);
-    document.getElementById('number').style.color = "black";
-})
-const sleep = (milliseconds) => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds))
+const updateNumber = (n, increasing = false) => {
+  document.getElementById("number").innerText = n;
+  if (n > 0 || increasing) {
+    document.getElementById("number").style.color = "green";
+  } else if (n < 0) {
+    document.getElementById("number").style.color = "red";
+  } else if (n == 0) {
+    document.getElementById("number").style.color = "black";
   }
-start.addEventListener('click', async function () {
-    for(var i=0;i<10;i++){
-        n++;
-        await sleep(1000) 
-        document.getElementById('number').innerText = n;
-        console.log(n);
-        document.getElementById('number').style.color = "green";
-    }
-        if (n > 0) {
-        document.getElementById('number').style.color = "green";
-    }
-    if (n == 0) {
-        document.getElementById('number').style.color = "black";
-    }
-})
+};
+
+let n = 0;
+const btn_plus = document.getElementById("btn_plus");
+const btn_minus = document.getElementById("btn_minus");
+const btn_reset = document.getElementById("btn_reset");
+const start = document.getElementById("start");
+
+btn_plus.addEventListener("click", () => {
+  n++;
+  updateNumber(n);
+});
+
+btn_minus.addEventListener("click", () => {
+  n--;
+  updateNumber(n);
+});
+
+btn_reset.addEventListener("click", () => {
+  n = 0;
+  updateNumber(n);
+});
+
+const sleep = (milliseconds) => {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
+let counting = false;
+start.addEventListener("click", async function () {
+  if (counting) {
+    return;
+  }
+  counting = true;
+  for (var i = 0; i < 10; i++) {
+    n++;
+    await sleep(1000);
+    updateNumber(n, true);
+  }
+  updateNumber(n);
+  counting = false;
+});
