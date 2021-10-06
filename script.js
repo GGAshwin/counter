@@ -22,17 +22,22 @@ btn_plus.addEventListener('click', function () {
     n++;
     document.getElementById('number').innerText = n;
     console.log(n);
+    if (n >= 0) {
+        document.getElementById('number').style.color = "black";
+    }
 })
 btn_minus.addEventListener('click', function () {
     n--;
     document.getElementById('number').innerText = n;
-    console.log(n);
+    // console.log(n);
+    if (n < 0) {
+        document.getElementById('number').style.color = "red";
+    }
 })
 btn_reset.addEventListener('click', function () {
     n = 0;
     document.getElementById('number').innerText = n;
-    console.log(n);
+    // console.log(n);
+    document.getElementById('number').style.color = "black";
 })
-if (n < 0) {
-    document.getElementById('number').style.color = "red";
-}
+
