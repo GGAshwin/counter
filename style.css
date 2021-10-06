@@ -26,8 +26,9 @@
           flex-direction: column;
 }
 
-.container h1 {
+.container h1:hover  {
   font-size: 50px;
+  color: rgb(68, 0, 255);
 }
 
 .container #number {
@@ -51,6 +52,10 @@ button {
 button:hover {
   background-color: black;
   color: white;
+  box-shadow: 0 9px 10px 0 rgba(0,0,0,0.24), 0 9px 15px 0 rgba(0,0,0,0.19);
+}
+button:active {
+  transform: translateY(4px);
 }
 
 @media only screen and (max-width: 600px) {

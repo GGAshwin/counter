@@ -18,6 +18,7 @@ var n = 0;
 const btn_plus = document.getElementById('btn_plus');
 const btn_minus = document.getElementById('btn_minus');
 const btn_reset = document.getElementById('btn_reset');
+const start = document.getElementById('start');
 btn_plus.addEventListener('click', function () {
     n++;
     document.getElementById('number').innerText = n;
@@ -43,4 +44,21 @@ btn_reset.addEventListener('click', function () {
     // console.log(n);
     document.getElementById('number').style.color = "black";
 })
-
+const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  }
+start.addEventListener('click', async function () {
+    for(var i=0;i<10;i++){
+        n++;
+        await sleep(1000) 
+        document.getElementById('number').innerText = n;
+        console.log(n);
+        document.getElementById('number').style.color = "green";
+    }
+        if (n > 0) {
+        document.getElementById('number').style.color = "green";
+    }
+    if (n == 0) {
+        document.getElementById('number').style.color = "black";
+    }
+})
