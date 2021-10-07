@@ -14,18 +14,10 @@ function getrandomNumber() {
     return Math.floor(Math.random() * hex.length);
 }*/
 
-const achievement_list = [
-  {
-    title: "Your First Count!",
-    minN: 1,
-    achieved: false,
-  },
-];
-
 const updateNumber = (n, increasing = false) => {
   achievement_list.forEach((item) => {
     if (item.achieved === false) {
-      if (n >= item.minN) {
+      if (n >= item.min_count) {
         let achievement_item = document.createElement("div");
         achievement_item.classList.add("achievement-item");
         achievement_item.innerHTML = item.title;
