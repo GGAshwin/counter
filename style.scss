@@ -1,47 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-.container{
-    position: fixed;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    h1{
-        font-size: 50px;
-    }
-    #number{
-        font-size: 100px;
-    }
+.container {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-size: 50px;
+  }
+  #number {
+    font-size: 100px;
+  }
 }
-.buttons{
-    position: fixed;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 65%;
+.buttons {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 65%;
 }
-button{
-    padding: 10px;
-    border: 0;
+button {
+  cursor: pointer;
+  padding: 10px;
+  border: 0;
 }
-button:hover{
-    background-color: black;
-    color: white;
+button:hover {
+  background-color: black;
+  color: white;
 }
 @media only screen and (max-width: 600px) {
-    .buttons{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    button{
-        margin: 5px 0 10px 0;
-    }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
+  button {
+    margin: 5px 0 10px 0;
+  }
+}
+
+.achievement-container {
+  text-align: center;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 85%;
+}
+.achievement-list {
+  width: 200px;
+  height: 100px;
+  overflow-y: auto;
+}
+.achievement-item {
+  text-align: left;
+  background-color: #efefef;
+  margin: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+}
