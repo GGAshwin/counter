@@ -14,20 +14,36 @@
   align-items: center;
   flex-direction: column; }
   .container h1 {
-    font-size: 50px; }
+    font-size: 50px;
+  color: rgb(240, 15, 27); }
   .container #number {
+    color:red ;
     font-size: 100px; }
-
+  .backg
+    {
+        /*background: linear-gradient(rgba(0,0,0,0.5),#009688), url("images/background.jpg");*/
+        background: url("backpr.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        image-resolution: 10;
+    }
 .buttons {
   position: fixed;
+  
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 65%; }
+  top: 65%;
+  border-radius: 50px;
+ }
 
 button {
   cursor: pointer;
-  padding: 10px;
-  border: 0; }
+  font-size: larger;
+  font-family: sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+color: blue; }
 
 button:hover {
   background-color: black;
@@ -38,13 +54,15 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+  border-radius: 50px; }
 
   button {
     margin: 5px 0 10px 0; } }
 .achievement-container {
   text-align: center;
   position: fixed;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 85%; }
