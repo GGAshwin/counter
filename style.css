@@ -15,7 +15,7 @@
   flex-direction: column; }
   .container h1 {
     font-size: 50px;
-  color: rgb(240, 15, 27); }
+  color: rgb(30, 25, 87); }
   .container #number {
     color:red ;
     font-size: 100px; }
@@ -30,11 +30,10 @@
     }
 .buttons {
   position: fixed;
-  
   transform: translate(-50%, -50%);
   left: 50%;
   top: 65%;
-  border-radius: 50px;
+  border-radius: 10px;
  }
 
 button {
@@ -42,7 +41,7 @@ button {
   font-size: larger;
   font-family: sans-serif;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30%;
 color: blue; }
 
 button:hover {
