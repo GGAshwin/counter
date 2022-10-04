@@ -14,8 +14,11 @@
   align-items: center;
   flex-direction: column; }
   .container h1 {
-    font-size: 50px;
-  color: rgb(30, 25, 87); }
+    font-weight: normal;
+    color: transparent;
+    -webkit-text-stroke: 0.19rem #eeeeee;
+    font-size: 7vw;
+    display: block; }
   .container #number {
     color:red ;
     font-size: 100px; }
