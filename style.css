@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+}
 
 .container {
   position: fixed;
@@ -12,44 +13,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
-  .container h1 {
-    font-weight: normal;
-    color: transparent;
-    -webkit-text-stroke: 0.19rem #eeeeee;
-    font-size: 7vw;
-    display: block; }
-  .container #number {
-    color:red ;
-    font-size: 100px; }
-  .backg
-    {
-        /*background: linear-gradient(rgba(0,0,0,0.5),#009688), url("images/background.jpg");*/
-        background: url("backpr.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        image-resolution: 10;
-    }
+  flex-direction: column;
+}
+.container h1 {
+  font-size: 50px;
+}
+.container #number {
+  font-size: 100px;
+}
+
 .buttons {
   position: fixed;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 65%;
-  border-radius: 10px;
- }
+}
 
 button {
   cursor: pointer;
-  font-size: larger;
-  font-family: sans-serif;
-  padding: 20px;
-  border-radius: 30%;
-color: blue; }
+  padding: 10px;
+  border: 0;
+}
 
 button:hover {
   background-color: black;
-  color: white; }
+  color: white;
+}
 
 @media only screen and (max-width: 600px) {
   .buttons {
@@ -57,22 +46,24 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  border-radius: 50px; }
-
+  }
   button {
-    margin: 5px 0 10px 0; } }
+    margin: 5px 0 10px 0;
+  }
+}
 .achievement-container {
   text-align: center;
   position: fixed;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 85%; }
+  top: 85%;
+}
 
 .achievement-list {
   width: 200px;
   height: 100px;
-  overflow-y: auto; }
+  overflow-y: auto;
+}
 
 .achievement-item {
   text-align: left;
@@ -81,6 +72,5 @@ button:hover {
   padding-left: 5px;
   padding-top: 2px;
   padding-bottom: 2px;
-  border-radius: 5px; }
-
-/*# sourceMappingURL=style.css.map */
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */

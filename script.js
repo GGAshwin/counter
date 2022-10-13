@@ -56,6 +56,7 @@ btn_minus.addEventListener("click", () => {
 btn_reset.addEventListener("click", () => {
   n = 0;
   updateNumber(n);
+  document.getElementById("my-achievement").innerHTML = "";
 });
 
 const sleep = (milliseconds) => {
